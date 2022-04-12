@@ -1,16 +1,14 @@
-#!/usr/env/bin bash
+#!/usr/bin/env bash
 
 # get the number of files in the current directory
-num_of_files=$(find . -type f | wc -l)
+num_of_files=$(find . -maxdepth 1 -type f | wc -l)
 
+echo "How many files are there in the current directory? "
+	
 # runs until user guesses the number 
 while [[ $user_input != $num_of_files ]]
 do
-	echo "How many files are there in the current directory? "
-
 	read user_input
-
-	echo "Entered Input: $user_input"
 
 	if [[ user_input -lt num_of_files ]]
 	then
