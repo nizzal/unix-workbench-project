@@ -19,10 +19,10 @@ function run_guess_program {
 		else
 			if [[ user_input -lt num_of_files ]]
 			then
-				echo "too low"
+				echo -e "guess is too low\nplease guess again!"
 			elif [[ user_input -gt num_of_files ]]
 			then
-				echo "too high"
+				echo -e "guess is too high\nplease guess again!"
 			elif [[ num_of_files -eq user_input ]]
 			then
 				echo "Congratulations you guessed it right!"
